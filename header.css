@@ -1,0 +1,132 @@
+.header_div_full {
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+}
+header {
+    width: 73vw;
+    background: #ded9cdc4;
+    backdrop-filter: blur(10px);
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+    filter: drop-shadow(0px 0px 10px #9d907cce);
+    transition: all .2s ease-in-out;
+}
+header.closed {
+    border-radius: 100px;
+    height: 8vh;
+}
+header.open {
+    border-radius: 50px;
+    height: 48vh;
+}
+.header_div {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo_div {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.menu_div {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.logo {
+    justify-self: start;
+    width: 50%;
+    font-size: clamp(24px, 5vw, 64px);
+    font-family: 'Soyuz Grotesk';
+    color: #9D907C;
+}
+.btn_menu {
+    justify-self: end;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    background: transparent;
+    align-items: end;
+}
+
+.bar_long {
+    transition: all .5s ease-in-out;
+    width: 4vw;
+    height: 1vh;
+    background: #9D907C;
+}
+
+.bar_short {
+    transition: all .5s ease-in-out;
+    width: 3vw;
+    height: 1vh;
+    background: #9D907C;
+}
+.bar_long.clicked {
+    position: absolute;
+    top: 40px;
+    width: 3vw;
+    height: 1vh;
+    background: #9D907C;
+    transform: rotate(45deg);
+}
+.bar_short.clicked {
+    position: absolute;
+    top: 40px;
+    width: 3vw;
+    height: 1vh;
+    background: #9D907C;
+    transform: rotate(-45deg);
+}
+
+
+.header_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vw;
+    display: none;
+}
+
+.header_info.open {
+    display: flex;
+}
+
+.header_info .link {
+    font-family: 'Rimma_Sans';
+    font-size: clamp(16px, 5vw, 46px);
+    color: #9D907C;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: shower 3s ;
+}
+.header_info .link.show {
+    opacity: 1;
+}
+.header_info .link.call {
+    background: #DED9CD;
+    color: #9D907C;
+    width: 100%;
+}
+
+@keyframes shower {
+   from{
+    opacity: 0;
+   }; 
+   to{
+    opacity: 1;
+   }
+}
